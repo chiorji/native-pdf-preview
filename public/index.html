@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previewing pdf in an html document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-header">
+        <h1>PDF Doc Preview(with native apis)</h1>
+        <button id="getPrev">Preview file</button>
+    </header>
+    <main>
+        <div id="preview-wrap">
+            <iframe id="preview"></iframe>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+    <script>
+        document.querySelector('#getPrev').addEventListener('click', 
+        function () {
+            Fetcher.fetchFile()
+        }, false)
+    </script>
+</body>
+</html>
